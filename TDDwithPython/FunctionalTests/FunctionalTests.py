@@ -1,7 +1,20 @@
 from selenium import webdriver
+import unittest
 
-driver = webdriver.Chrome('chromedriver.exe')
-driver.get('http://www.baidu.com')
-import time
-time.sleep(5)
-driver.quit()
+
+class NewVisitorTest(unittest.TestCase):
+    def setUp(self):
+        self.browser = webdriver.Chrome('chromedriver.exe')
+        self.browser.implicitly_wait(5)
+
+    def tearDown(self):
+        self.browser.quit()
+
+    def test_casn_start_a_list_and_retrieve_it_later(self):
+        self.browser.get('http://localhost:8000')
+        self.assertIn('To-Do', self.browser.title)
+
+
+
+if __name__ == "__main__":
+    unittest.main()

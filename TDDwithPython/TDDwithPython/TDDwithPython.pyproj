@@ -11,8 +11,7 @@
     <ProjectGuid>347fe07b-c7e1-4492-b8a9-0dda73ab09f9</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>manage.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -29,6 +28,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="lists\admin.py" />
+    <Compile Include="lists\apps.py" />
+    <Compile Include="lists\migrations\__init__.py" />
+    <Compile Include="lists\models.py" />
+    <Compile Include="lists\tests.py" />
+    <Compile Include="lists\views.py" />
+    <Compile Include="lists\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="TDDwithPython\__init__.py" />
     <Compile Include="TDDwithPython\settings.py" />
@@ -36,9 +42,13 @@
     <Compile Include="TDDwithPython\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="lists\templates\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="lists\" />
+    <Folder Include="lists\migrations\" />
+    <Folder Include="lists\templates\" />
     <Folder Include="TDDwithPython\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
